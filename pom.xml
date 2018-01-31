@@ -44,7 +44,7 @@
         <findbugs.skip>false</findbugs.skip>
 
         <jersey.version>2.25.1</jersey.version>
-        <eclipselink.version>2.6.3</eclipselink.version>
+        <eclipselink.version>2.7.0</eclipselink.version>
         <hibernate.validator.version>6.0.5.Final</hibernate.validator.version>
         <jackson.version>2.9.2</jackson.version>
         <jjwt.version>0.9.0</jjwt.version>
@@ -244,7 +244,7 @@
                     <artifactId>findbugs-maven-plugin</artifactId>
                     <version>${findbugs.maven.plugin}</version>
                     <configuration>
-                    	<skip>${findbugs.skip}</skip>
+                        <skip>${findbugs.skip}</skip>
                         <threshold>LOW</threshold>
                         <xmlOutput>true</xmlOutput>
                         <findbugsXmlOutput>true</findbugsXmlOutput>
@@ -397,7 +397,7 @@
                 <artifactId>metrics-core</artifactId>
                 <version>${metrics.version}</version>
                 <scope>compile</scope>
-            </dependency>            
+            </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-jvm</artifactId>
@@ -422,7 +422,7 @@
                 <version>${metrics.version}</version>
                 <scope>compile</scope>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
@@ -441,7 +441,14 @@
                 <version>${log4j.version}</version>
                 <scope>compile</scope>
             </dependency>
-            
+
+            <dependency>
+                <groupId>org.glassfish.jersey.test-framework.providers</groupId>
+                <artifactId>jersey-test-framework-provider-grizzly2</artifactId>
+                <version>${jersey.version}</version>
+                <scope>test</scope>
+            </dependency>
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
