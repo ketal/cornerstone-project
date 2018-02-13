@@ -43,7 +43,7 @@
         <findbugs.maven.plugin>3.0.5</findbugs.maven.plugin>
         <findbugs.skip>false</findbugs.skip>
 
-        <jersey.version>2.25.1</jersey.version>
+        <jersey.version>2.26</jersey.version>
         <eclipselink.version>2.7.0</eclipselink.version>
         <hibernate.validator.version>6.0.5.Final</hibernate.validator.version>
         <jackson.version>2.9.2</jackson.version>
@@ -336,6 +336,12 @@
             <dependency>
                 <groupId>org.glassfish.jersey.media</groupId>
                 <artifactId>jersey-media-multipart</artifactId>
+                <version>${jersey.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.inject</groupId>
+                <artifactId>jersey-hk2</artifactId>
                 <version>${jersey.version}</version>
                 <scope>compile</scope>
             </dependency>
